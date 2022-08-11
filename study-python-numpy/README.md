@@ -29,7 +29,29 @@
 >>np.array([1, 2, 3, 4], dtype='float')
 >># array([1., 2., 3., 4.])
 >>```
->> ### 2.3 Numpy의 다양한 배열 만들기
+>> ### 2.3 Numpy 배열 데이터 타입 [dtype]
+>> Numpy의 배열은 List와 다르게 데이터 타입이 **단일 타입**으로 구성된다.
+>>```python
+>>arr = np.array([1, 2, 3, 4], dtype='float')
+>>arr # array([1., 2., 3., 4.])
+>>
+>>arr.dtype
+>># dtype('float64')
+>>
+>>arr.astype('int')
+>># array([1, 2, 3, 4])
+>>```
+>>
+>>> #### 2.3.1 dtype의 표현 방식
+>>>
+>>>|dtype|설명|표현 방식|
+>>>|:---:|:---:|:---:|
+>>>|int|정수형 타입|i, int_, int32, int64, i8|
+>>>|float|실수형 타입|f, float_, float32, float64, f8|
+>>>|str|문자열 타입|str, U, U32|
+>>>|bool|부울 타입|?, bool_|
+>>
+>> ### 2.4 Numpy의 다양한 배열 만들기 [zeros, ones, arange, linspace]
 >> 아래와 같은 방법으로도 배열을 만들 수 있다.
 >> ```python
 >> np.zeros(10, dtype='int')
@@ -43,26 +65,21 @@
 >> # array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])
 >>
 >> np.linspace(0, 1, 5)
->> array([0.  , 0.25, 0.5 , 0.75, 1.  ])
+>> # array([0.  , 0.25, 0.5 , 0.75, 1.  ])
 >> ```
->> ### 2.4 Numpy 배열 데이터 타입 [dtype]
->> Numpy의 배열은 List와 다르게 데이터 타입이 **단일 타입**으로 구성된다.
->>```python
->>arr = np.array([1, 2, 3, 4], dtype='float')
->>arr # array([1., 2., 3., 4.])
+>> ### 2.5 Numpy의 난수로 채워진 배열 만들기 [random, normal, randint]
+>> 아래와 같은 방법으로 난수로 채워진 배열을 만들 수 있다.
+>> ```python
+>> np.random.random((2, 2))
+>> # array([[0.1246479 , 0.43909669],
+>> #        [0.58342935, 0.2280941 ]])
 >>
->>arr.dtype
->># dtype('float64')
->>
->>arr.astype('int')
->># array([1, 2, 3, 4])
->>```
->>
->>> #### 2.4.1 dtype의 표현 방식
->>>
->>>|dtype|설명|표현 방식|
->>>|:---:|:---:|:---:|
->>>|int|정수형 타입|i, int_, int32, int64, i8|
->>>|float|실수형 타입|f, float_, float32, float64, f8|
->>>|str|문자열 타입|str, U, U32|
->>>|bool|부울 타입|?, bool_|
+>> np.random.normal(0, 1, (2,2))
+>> # array([[ 1.23267107,  0.37128397],
+>> #        [ 0.91725704, -0.56180164]])
+>> 
+>> np.random.randint(0, 10, (2, 2))
+>> # array([[0, 3],
+>> #        [7, 5]])
+>> ```
+
