@@ -67,7 +67,7 @@
 >> np.linspace(0, 1, 5)
 >> # array([0.  , 0.25, 0.5 , 0.75, 1.  ])
 >> ```
->> ### 2.5 Numpy의 난수로 채워진 배열 만들기 [random, normal, randint] <a href='https://github.com/HY0SANG/study-python/edit/main/study-python-numpy/random.py'><image width='23px' src='https://user-images.githubusercontent.com/110414297/184264138-d62cb488-d3f1-45c6-9f4e-d48b93aefabf.png'></a>
+>> ### 2.5 Numpy의 난수로 채워진 배열 만들기 [random, normal, randint] <a href='https://github.com/HY0SANG/study-python/blob/main/study-python-numpy/random.py'><image width='23px' src='https://user-images.githubusercontent.com/110414297/184264138-d62cb488-d3f1-45c6-9f4e-d48b93aefabf.png'></a>
 
 >> 아래와 같은 방법으로 난수로 채워진 배열을 만들 수 있다.
 >> ```python
