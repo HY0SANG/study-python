@@ -12,8 +12,8 @@
 >>```python
 >>import numpy as np
 >>```
->> ### 2.2 Numpy 배열 만들기 [array]
->> Numpy의 배열은 아래와 같은 방법으로 만들 수 있다.
+> ## 3. Numpy의 배열 생성 방법
+>> ### 3.1 Numpy의 array 함수를 사용한 배열 생성 방법
 >>```python
 >>np.array([1, 2, 3, 4, 5])
 >># array([1, 2, 3, 4, 5])
@@ -29,7 +29,20 @@
 >>np.array([1, 2, 3, 4], dtype='float')
 >># array([1., 2., 3., 4.])
 >>```
->> ### 2.3 Numpy 배열 데이터 타입 [dtype]
+>>> #### 3.1.1 array 함수의 매개변수
+>>> ```python
+>>>np.array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0, like=None)
+>>>```
+>>>|Parameter|Type|Optional|
+>>>|:--:|:--:|:--:|
+>>>|object|array_like|N|
+>>>|dtype|data-type|Y|
+>>>|copy|bool|Y|
+>>>|order|{'K','A','C','F'}|Y|
+>>>|subok|bool|Y|
+>>>|ndmin|int|Y|
+>>>|like|array_like|Y|
+>> ### 3.2 Numpy 배열 데이터 타입 [dtype]
 >> Numpy의 배열은 List와 다르게 데이터 타입이 **단일 타입**으로 구성된다.
 >>```python
 >>arr = np.array([1, 2, 3, 4], dtype='float')
@@ -42,7 +55,7 @@
 >># array([1, 2, 3, 4])
 >>```
 >>
->>> #### 2.3.1 dtype의 표현 방식
+>>> #### 3.2.1 dtype의 표현 방식
 >>>
 >>>|dtype|설명|표현 방식|
 >>>|:---:|:---:|:---:|
@@ -51,7 +64,7 @@
 >>>|str|문자열 타입|str, U, U32|
 >>>|bool|부울 타입|?, bool_|
 >>
->> ### 2.4 Numpy의 다양한 배열 만들기 [zeros, ones, arange, linspace]
+>> ### 3.3 Numpy의 다양한 배열 만들기 [zeros, ones, arange, linspace]
 >> 아래와 같은 방법으로도 배열을 만들 수 있다.
 >> ```python
 >> np.zeros(10, dtype='int')
@@ -67,7 +80,7 @@
 >> np.linspace(0, 1, 5)
 >> # array([0.  , 0.25, 0.5 , 0.75, 1.  ])
 >> ```
->> ### 2.5 Numpy의 난수로 채워진 배열 만들기 [random, normal, randint] <a href='https://github.com/HY0SANG/study-python/blob/main/study-python-numpy/random.py'><image width='23px' src='https://user-images.githubusercontent.com/110414297/184264138-d62cb488-d3f1-45c6-9f4e-d48b93aefabf.png'></a>
+>> ### 3.4 Numpy의 난수로 채워진 배열 만들기 [random, normal, randint] <a href='https://github.com/HY0SANG/study-python/blob/main/study-python-numpy/random.py'><image width='23px' src='https://user-images.githubusercontent.com/110414297/184264138-d62cb488-d3f1-45c6-9f4e-d48b93aefabf.png'></a>
 
 >> 아래와 같은 방법으로 난수로 채워진 배열을 만들 수 있다.
 >> ```python
