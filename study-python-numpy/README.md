@@ -138,3 +138,40 @@
 >>
 >> np.array([[1, 2], [3, 4], [5, 6]]).size  # 6
 >>```
+>>
+>>
+>>
+>> ## 5. Numpy 배열의 인덱싱과 슬라이싱
+>> ### 5.1 Numpy 배열의 인덱싱 방법
+>> Numpy의 배열은 아래와 같이 인덱싱(Indexing)할 수 있다.
+>>```python
+>> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
+>>
+>> arr[3]
+>> # 3
+>> 
+>> arr[7]
+>> # IndexError: index 7 is out of bounds for axis 0 with size 7
+>>
+>> arr[0] = 10
+>> # array([10, 1, 2, 3, 4, 5, 6])
+>>```
+>>
+>>
+>> ### 5.2 Numpy 배열의 슬라이싱 방법 
+>> Numpy의 배열은 아래와 같이 슬라이싱(Slicing)할 수 있다.
+>>```python
+>> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
+>>
+>> arr[1:4]
+>> # array([1, 2, 3])
+>> 
+>> arr[1:]
+>> # array([1, 2, 3, 4, 5, 6])
+>>
+>> arr[:4]
+>> # array([0, 1, 2, 3])
+>>
+>> arr[::2]
+>> # array([0, 2, 4, 6])
+>>```
