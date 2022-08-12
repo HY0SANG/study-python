@@ -1,9 +1,11 @@
 import numpy as np
 
-print("2차원 array")
+print("2차원 array") # 2차원 array
 matrix = np.arange(1, 16).reshape(3,5)  #1부터 15까지 들어있는 (3,5)짜리 배열을 만듭니다.
 print(matrix)
-
+# [[ 1  2  3  4  5]
+#  [ 6  7  8  9 10]
+#  [11 12 13 14 15]]
 
 # Q1. matrix의 자료형을 출력해보세요.
 print(type(matrix))  # <class 'numpy.ndarray'>
