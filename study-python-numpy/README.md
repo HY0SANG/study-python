@@ -12,7 +12,7 @@
 >>```python
 >>import numpy as np
 >>```
->> ### 2.2 Numpy 배열 만들기 [array] <a href='https://naver.com'><image width='50px' src='https://user-images.githubusercontent.com/110414297/184263676-0266335a-5a92-49fa-8325-f13725fac8cd.png'></a>
+>> ### 2.2 Numpy 배열 만들기 [array]
 >> Numpy의 배열은 아래와 같은 방법으로 만들 수 있다.
 >>```python
 >>np.array([1, 2, 3, 4, 5])
@@ -67,7 +67,8 @@
 >> np.linspace(0, 1, 5)
 >> # array([0.  , 0.25, 0.5 , 0.75, 1.  ])
 >> ```
->> ### 2.5 Numpy의 난수로 채워진 배열 만들기 [random, normal, randint]
+>> ### 2.5 Numpy의 난수로 채워진 배열 만들기 [random, normal, randint] <a href='https://github.com/HY0SANG/study-python/edit/main/study-python-numpy/random.py'><image width='23px' src='https://user-images.githubusercontent.com/110414297/184264138-d62cb488-d3f1-45c6-9f4e-d48b93aefabf.png'></a>
+
 >> 아래와 같은 방법으로 난수로 채워진 배열을 만들 수 있다.
 >> ```python
 >> np.random.random((2, 2))
