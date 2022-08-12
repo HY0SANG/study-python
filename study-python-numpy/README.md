@@ -143,7 +143,7 @@
 >>
 >> ## 5. Numpy 배열의 인덱싱과 슬라이싱
 >> ### 5.1 Numpy 배열의 인덱싱 방법
->> Numpy의 배열은 아래와 같이 인덱싱(Indexing)할 수 있다.
+>> Numpy의 배열은 아래와 같이 **인덱싱(Indexing)**할 수 있다.
 >>```python
 >> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
 >>
@@ -159,7 +159,7 @@
 >>
 >>
 >> ### 5.2 Numpy 배열의 슬라이싱 방법 
->> Numpy의 배열은 아래와 같이 슬라이싱(Slicing)할 수 있다.
+>> Numpy의 배열은 아래와 같이 **슬라이싱(Slicing)**할 수 있다.
 >>```python
 >> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
 >>
