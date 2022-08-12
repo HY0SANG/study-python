@@ -12,7 +12,7 @@
 >>```python
 >>import numpy as np
 >>```
->> ### 2.2 Numpy 배열 만들기 [array]
+>> ### 2.2 Numpy 배열 만들기 [array] <a href='https://naver.com'><image width='50px' src='https://user-images.githubusercontent.com/110414297/184263676-0266335a-5a92-49fa-8325-f13725fac8cd.png'></a>
 >> Numpy의 배열은 아래와 같은 방법으로 만들 수 있다.
 >>```python
 >>np.array([1, 2, 3, 4, 5])
