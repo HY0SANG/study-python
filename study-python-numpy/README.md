@@ -201,8 +201,26 @@
 >> np.concatenate([arr1, arr2])
 >> # array([0, 1, 2, 3, 4, 5])
 >> ```
->> 
->> 
+>>> #### 6.2.1 axis 속성 사용 방법
+>>> ```python
+>>> arr1 = np.array([[1, 2], [3, 4]])
+>>> arr2 = np.array([[5, 6]])
+>>>
+>>> np.concatenate((arr1, arr2), axis=0)
+>>> # array([[1, 2],
+>>> #        [3, 4],
+>>> #        [5, 6]])
+>>>
+>>> np.concatenate((arr1, arr2.T), axis=1)
+>>> # array([[1, 2, 5],
+>>> #        [3, 4, 6]])
+>>>
+>>> np.concatenate((arr1, arr2), axis=None)
+>>> # array([1, 2, 3, 4, 5, 6])
+>>> ```
+>>> 
+>>> 
+>>> 
 >> 
 >> 
 >> 
