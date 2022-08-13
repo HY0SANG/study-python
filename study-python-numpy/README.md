@@ -190,3 +190,26 @@
 >> #       [4, 5, 6, 7]])
 >> arr2.shape  # (2, 4)
 >>```
+>>
+>>
+>> ### 6.2 Numpy 배열 합치기 방법 [concatenate]
+>> Numpy의 배열은 **concatenate**를 통해 합칠 수 있다.
+>> ```python
+>> arr1 = np.array([0, 1, 2])  # array([0, 1, 2])
+>> arr2 = np.array([3, 4, 5])  # array([3, 4, 5])
+>>
+>> np.concatenate([arr1, arr2])
+>> # array([0, 1, 2, 3, 4, 5])
+>> ```
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
+>> 
