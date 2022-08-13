@@ -19,7 +19,7 @@
 >
 >
 > ## 3. Numpy의 배열 생성 방법
->> ### 3.1 Numpy의 array 함수를 사용한 배열 생성 방법
+>> ### 3.1 Numpy array 함수를 사용한 배열 생성 방법
 >>```python
 >>np.array([1, 2, 3, 4, 5])
 >># array([1, 2, 3, 4, 5])
@@ -91,7 +91,7 @@
 >>
 >> ## 4. Numpy 배열의 속성
 >> ### 4.1 Numpy 배열의 데이터 타입 [dtype]
->> Numpy의 배열은 List와 다르게 데이터 타입이 **단일 타입**으로 구성된다.
+>> Numpy 배열은 List와 다르게 데이터 타입이 **단일 타입**으로 구성된다.
 >>
 >> 배열의 데이터 타입은 `arr.dtype` 으로 확인할 수 있다.
 >>```python
@@ -143,7 +143,7 @@
 >>
 >> ## 5. Numpy 배열의 인덱싱과 슬라이싱
 >> ### 5.1 Numpy 배열의 인덱싱 방법
->> Numpy의 배열은 아래와 같이 인덱싱(Indexing)할 수 있다.
+>> Numpy 배열은 아래와 같이 인덱싱(Indexing)할 수 있다.
 >>```python
 >> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
 >>
@@ -159,7 +159,7 @@
 >>
 >>
 >> ### 5.2 Numpy 배열의 슬라이싱 방법 
->> Numpy의 배열은 아래와 같이 슬라이싱(Slicing)할 수 있다.
+>> Numpy 배열은 아래와 같이 슬라이싱(Slicing)할 수 있다.
 >>```python
 >> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
 >>
@@ -180,7 +180,7 @@
 >>
 >> ## 6. Numpy 배열의 모양 바꾸기 및 배열 합치기, 나누기
 >> ### 6.1 Numpy 배열의 모양 바꾸기 방법 [reshape]
->> Numpy의 배열은 **reshape**를 통해 모양을 바꿀 수 있다.
+>> Numpy 배열은 **reshape**를 통해 모양을 바꿀 수 있다.
 >>```python
 >> arr1 = np.arange(8)  # array([0, 1, 2, 3, 4, 5, 6, 7])
 >> arr1.shape  # (8,)
@@ -193,7 +193,7 @@
 >>
 >>
 >> ### 6.2 Numpy 배열 합치기 방법 [concatenate]
->> Numpy의 배열은 **concatenate**를 통해 합칠 수 있다.
+>> Numpy 배열은 **concatenate**를 통해 합칠 수 있다.
 >> ```python
 >> arr1 = np.array([0, 1, 2])  # array([0, 1, 2])
 >> arr2 = np.array([3, 4, 5])  # array([3, 4, 5])
@@ -224,7 +224,7 @@
 >>
 >>
 >> ### 6.3 Numpy 배열 나누기 방법 [split]
->> Numpy의 배열은 **split**을 통해 나눌 수 있다.
+>> Numpy 배열은 **split**을 통해 나눌 수 있다.
 >>
 >> split 또한 axis 속성을 사용할 수 있다.
 >>
@@ -266,7 +266,8 @@
 >>
 >>
 >> ## 7. Numpy 배열의 연산 방법
->> ### 7.1 Numpy 배열의 기본 연산 [Universal Function]
+>> ### 7.1 Numpy 배열의 기본 연산 방법 [Universal Function]
+>> Numpy 배열은 기본적으로 +, -, *, /, % 등의 연산을 지원한다.
 >> ```python
 >> arr = np.arange(4)
 >> # array([0, 1, 2, 3])
@@ -281,11 +282,22 @@
 >> ```
 >> 
 >> 
->> 
->> 
->> 
->> 
->> 
+>> ### 7.2 Numpy 배열의 다차원 행렬의 연산 방법
+>> Numpy 배열은 다차원 행렬의 연산도 지원한다.
+>> ```python
+>> arr1 = np.arange(4).reshape(2, 2)
+>> # array([0, 1],
+>> #       [2, 3])
+>> arr2 = np.arange(4,8).reshape(2, 2)
+>> # array([4, 5],
+>> #       [6, 7])
+>> arr1 + arr2
+>> # array([[ 4,  6],
+>> #        [ 8, 10]])
+>> arr1 - arr2
+>> # array([[-4, -4],
+>> #        [-4, -4]])
+>> ```
 >> 
 >> 
 >> 
