@@ -345,11 +345,11 @@
 >> # array([[0, 1, 2, 3],
 >> #        [4, 5, 6, 7]])
 >> 
->> arr.sum()  # 28 == np.sum(arr)
->> arr.min()  # 0  == np.min(arr)
->> arr.max()  # 7  == np.max(arr)
->> arr.mean()  # 3.5  == np.mean(arr)
->> arr.std()  # 2.29128784747792  == np.std(arr)
+>> np.sum(arr)  # 28                ==  arr.sum()
+>> np.min(arr)  # 0                 ==  arr.min()
+>> np.max(arr)  # 7                 ==  arr.max()
+>> np.mean(arr)  # 3.5              ==  arr.mean()
+>> np.std(arr)  # 2.29128784747792  ==  arr.std()
 >> 
 >> ```
 >> 
