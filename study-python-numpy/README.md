@@ -142,7 +142,7 @@
 >>
 >>
 >> ## 5. Numpy 배열의 인덱싱과 슬라이싱
->> ### 5.1 Numpy 배열의 인덱싱 방법
+>> ### 5.1 Numpy 배열의 인덱싱
 >> Numpy 배열은 아래와 같이 인덱싱(Indexing)할 수 있다.
 >>```python
 >> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
@@ -158,7 +158,7 @@
 >>```
 >>
 >>
->> ### 5.2 Numpy 배열의 슬라이싱 방법 
+>> ### 5.2 Numpy 배열의 슬라이싱
 >> Numpy 배열은 아래와 같이 슬라이싱(Slicing)할 수 있다.
 >>```python
 >> arr = np.arange(7)  # array([0, 1, 2, 3, 4, 5, 6])
@@ -179,7 +179,7 @@
 >>
 >>
 >> ## 6. Numpy 배열의 모양 바꾸기 및 배열 합치기, 나누기
->> ### 6.1 Numpy 배열의 모양 바꾸기 방법 [reshape]
+>> ### 6.1 Numpy 배열의 모양 바꾸기 [reshape]
 >> Numpy 배열은 **reshape**를 통해 모양을 바꿀 수 있다.
 >>```python
 >> arr1 = np.arange(8)  # array([0, 1, 2, 3, 4, 5, 6, 7])
@@ -192,7 +192,7 @@
 >>```
 >>
 >>
->> ### 6.2 Numpy 배열 합치기 방법 [concatenate]
+>> ### 6.2 Numpy 배열 합치기 [concatenate]
 >> Numpy 배열은 **concatenate**를 통해 합칠 수 있다.
 >> ```python
 >> arr1 = np.array([0, 1, 2])  # array([0, 1, 2])
@@ -201,7 +201,7 @@
 >> np.concatenate([arr1, arr2])
 >> # array([0, 1, 2, 3, 4, 5])
 >> ```
->>> #### 6.2.1 axis 속성 사용 방법
+>>> #### 6.2.1 axis 속성 사용
 >>> axis 속성에는 0, 1, None 값을 설정할 수 있다.
 >>>
 >>> axis 속성의 **Default 값은 0** 이다.
@@ -223,7 +223,7 @@
 >>> ```
 >>
 >>
->> ### 6.3 Numpy 배열 나누기 방법 [split]
+>> ### 6.3 Numpy 배열 나누기 [split]
 >> Numpy 배열은 **split**을 통해 나눌 수 있다.
 >>
 >> split 또한 axis 속성을 사용할 수 있다.
@@ -265,7 +265,7 @@
 >>
 >>
 >>
->> ## 7. Numpy 배열의 연산 방법
+>> ## 7. Numpy 배열의 연산
 >> ### 7.1 Numpy 배열의 기본 연산 방법 [Universal Function]
 >> Numpy 배열은 기본적으로 +, -, *, /, % 등의 연산을 지원한다.
 >> ```python
@@ -282,7 +282,7 @@
 >> ```
 >> 
 >> 
->> ### 7.2 Numpy 배열의 다차원 행렬의 연산 방법
+>> ### 7.2 Numpy 배열의 다차원 행렬의 연산
 >> Numpy 배열은 다차원 행렬의 연산도 지원한다.
 >> ```python
 >> arr1 = np.arange(4).reshape(2, 2)
@@ -300,7 +300,7 @@
 >> ```
 >> 
 >> 
->> ### 7.3 Numpy 배열의 브로드캐스팅 방법
+>> ### 7.3 Numpy 배열의 브로드캐스팅
 >> Shape가 다른 배열끼리 연산 방법은 아래와 같다.
 >> ```python
 >> # [[6, 3, 4],                     [[7, 5, 7],
@@ -357,9 +357,14 @@
 >> # array([ 6, 22])
 >> ```
 >> 
->> 
->> 
->> 
+>>
+>> ### 8.2 Numpy 배열의 마스킹 연산
+>> ```python
+>> arr = np.arange(5)  # array([0, 1, 2, 3, 4])
+>> arr < 3  # array([ True,  True,  True, False, False])
+>> arr > 5  # array([False, False, False, False, False])
+>> arr[arr < 3]  # array([0, 1, 2])
+>> ```
 >> 
 >> 
 >> 
