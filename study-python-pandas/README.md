@@ -59,7 +59,7 @@
 >>
 >>
 >> ### 3.2 Pandas의 DataFrame
->> DataFrame은 여러 개의 Series 데이터가 모여 행과 열을 이룬다.
+>> DataFrame은 여러 개의 Series 데이터가 모여 **행(Index)** 과 **열(Columns)** 을 이룬다.
 >> ```python
 >> population_dict = {
 >>     'korea': 5180,
@@ -157,8 +157,49 @@
 > ## 6. Pandas DataFrame의 인덱싱과 슬라이싱
 >> ### 6.1 Pandas DataFrame의 인덱싱 [Indexing]
 >> ```python
->> country.loc['china']
+>> country.loc['china']  # == country.iloc[2]
+>> # population        1.415000e+05
+>> # gdp               1.409250e+09
+>> # gdp per capita    9.959364e+03
+>> # Name: china, dtype: float64
 >> 
 >> ```
->> 
+>>
+>>
 >> ### 6.2 Pandas DataFrame의 슬라이싱 [Slicing]
+>> ```python
+>> country.loc['japan':'korea']  # == country.iloc[0:2, :1]
+>> #        population
+>> # korea        5180
+>> # japan       12718
+>> 
+>> ```
+>>
+>>
+>> ### 6.3 Pandas DataFrame의 인덱싱과 슬라이싱을 사용하여 데이터 추가
+>> ```python
+>> df = pd.DataFrame(columns=['이름', '나이', '주소'])
+>> df.loc[0] = ['김효상', '24', '한국']
+>> #     이름  나이  주소
+>> # 0  김효상  24  한국
+>> 
+>> df.loc[1] = {'이름':'둘효상', '나이':'25', '주소':'미국'}
+>> #     이름  나이  주소
+>> # 0  김효상  24  한국
+>> # 1  둘효상  25  미국
+>> 
+>> df.loc[1, '이름'] = '셋효상'
+>> #     이름  나이  주소
+>> # 0  김효상  24  한국
+>> # 1  셋효상  25  미국
+>> 
+>> df['전화번호'] = np.nan
+>> #     이름  나이  주소  전화번호
+>> # 0  김효상  24  한국   NaN
+>> # 1  셋효상  25  미국   NaN
+>> 
+>> df.loc[0, '전화번호'] = '01012341234'
+>> #     이름  나이  주소     전화번호
+>> # 0  김효상  24  한국  01012341234
+>> # 1  셋효상  25  미국          NaN
+>> ```
