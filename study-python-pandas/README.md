@@ -120,7 +120,7 @@
 >
 > ## 4. Pandas DataFrame의 연산
 >> ### 4.1 DataFrame의 기초 연산자 사용
->> country DataFrame의 값은 <a href="https://github.com/HY0SANG/study-python/edit/main/study-python-pandas/README.md#32-pandas%EC%9D%98-dataframe">3.2 Pandas의 DataFrame</a> 참고
+>> country DataFrame의 값은 <a href="https://github.com/HY0SANG/study-python/blob/main/study-python-pandas/README.md#32-pandas%EC%9D%98-dataframe">3.2 Pandas의 DataFrame</a> 참고
 >> 
 >> 
 >> 
