@@ -151,3 +151,14 @@
 >> country = pd.read_csv("./country.csv")
 >> country = pd.read_excel("./country.xlsx")
 >> ```
+>
+>
+>
+> ## 6. Pandas DataFrame의 인덱싱과 슬라이싱
+>> ### 6.1 Pandas DataFrame의 인덱싱 [Indexing]
+>> ```python
+>> country.loc['china']
+>> 
+>> ```
+>> 
+>> ### 6.2 Pandas DataFrame의 슬라이싱 [Slicing]
