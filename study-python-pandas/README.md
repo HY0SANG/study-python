@@ -56,7 +56,35 @@
 >>
 >> population.values  # array([  5180,  12718, 141500,  32676], dtype=int64)
 >> ```
->>
+>> Pandas의 Series 데이터는 아래와 같이 연산할 수 있다.
+>> ```python
+>> A = pd.Series([2, 4, 6], index=[0, 1, 2])
+>> # 0    2
+>> # 1    4
+>> # 2    6
+>> # dtype: int64
+>> 
+>> B = pd.Series([1, 3, 5], index=[1, 2, 3])
+>> # 1    1
+>> # 2    3
+>> # 3    5
+>> # dtype: int64
+>> 
+>> A + B
+>> # 0    NaN
+>> # 1    5.0
+>> # 2    9.0
+>> # 3    NaN
+>> # dtype: float64
+>> 
+>> A.add(B, fill_value=0)
+>> # 0    2.0
+>> # 1    5.0
+>> # 2    9.0
+>> # 3    5.0
+>> # dtype: float64
+>> ```
+>> 
 >>
 >> ### 3.2 Pandas의 DataFrame
 >> DataFrame은 여러 개의 Series 데이터가 모여 **행(Index)** 과 **열(Columns)** 을 이룬다.
@@ -224,3 +252,15 @@
 >> df.insull()  # 누락된 데이터 True 반환
 >> df.notsull()  # 누락된 데이터 False 반환
 >> ```
+>> 
+>> 
+>> ### 7.2 Pandas DataFrame의 누락된 데이터 처리 [dropna, fillna]
+>> DataFrame의 dropna와 fillna 함수를 통해 누락(NaN, None)된 데이터를 처리할 수 있다.
+>> ```python
+>> df.dropna()  # 누락된 데이터 제거
+>> df['NaN이 있는 열'] = df['NaN이 있는 열'].fillna('NaN을 대체할 값')  # 누락된 데이터 False 반환
+>> ```
+>
+>
+>
+> ## 8. Pandas 
