@@ -148,6 +148,8 @@
 >
 > ## 4. Pandas DataFrame의 연산
 > **country** DataFrame의 값은 <a href="https://github.com/HY0SANG/study-python/blob/main/study-python-pandas/README.md#32-pandas%EC%9D%98-dataframe">3.2 Pandas의 DataFrame</a> 참고
+> 
+> DataFrame의 add(+), sub(-), mul(x), div(/) 함수를 통해서도 연산 가능하다.
 > ```python
 > gdp_per_capita = country['gdp'] / country['population']
 > # korea    32687.258687
