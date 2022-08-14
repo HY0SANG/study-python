@@ -168,7 +168,7 @@
 >>
 >> ### 6.2 Pandas DataFrame의 슬라이싱 [Slicing]
 >> ```python
->> country.loc['japan':'korea']  # == country.iloc[0:2, :1]
+>> country.loc['korea':'japan']  # == country.iloc[0:2, :1]
 >> #        population
 >> # korea        5180
 >> # japan       12718
