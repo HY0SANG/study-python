@@ -138,7 +138,6 @@
 > 
 >
 >
->
 > ## 5. Pandas DataFrame의 저장과 불러오기
 >> ### 5.1 Pandas DataFrame의 저장 [to_?]
 >> ```python
@@ -214,4 +213,14 @@
 >> #      이름  주소
 >> # 0  김효상  한국
 >> # 1  셋효상  미국
+>> ```
+>
+>
+>
+> ## 7. Pandas DataFrame의 함수
+>> ### 7.1 Pandas DataFrame의 누락된 데이터 확인 [isnull, notnull]
+>> DataFrame의 isnull과 notnull 함수를 통해 누락(NaN, None)된 데이터를 확인할 수 있다.
+>> ```python
+>> df.insull()  # 누락된 데이터 True 반환
+>> df.notsull()  # 누락된 데이터 False 반환
 >> ```
