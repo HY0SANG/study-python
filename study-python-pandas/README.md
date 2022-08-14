@@ -101,5 +101,15 @@
 >> # japan       12718   516700000
 >> # china      141500  1409250000
 >> # usa         32676  2041280000
+>>
+>> country.index  # Index(['korea', 'japan', 'china', 'usa'], dtype='object')
+>> country.columns  # Index(['population', 'gdp'], dtype='object')
+>> 
+>> country['gdp']
+>> # korea     169320000
+>> # japan     516700000
+>> # china    1409250000
+>> # usa      2041280000
+>> # Name: gdp, dtype: int64
 >> ```
 >> 
