@@ -120,8 +120,35 @@
 >
 > ## 4. Pandas DataFrame의 연산
 >> ### 4.1 DataFrame의 기초 연산자 사용
->> country DataFrame의 값은 <a href="https://github.com/HY0SANG/study-python/blob/main/study-python-pandas/README.md#32-pandas%EC%9D%98-dataframe">3.2 Pandas의 DataFrame</a> 참고
+>> **country** DataFrame의 값은 <a href="https://github.com/HY0SANG/study-python/blob/main/study-python-pandas/README.md#32-pandas%EC%9D%98-dataframe">3.2 Pandas의 DataFrame</a> 참고
+>> ```python
+>> gdp_per_capita = country['gdp'] / country['population']
+>> # korea    32687.258687
+>> # japan    40627.457147
+>> # china     9959.363958
+>> # usa      62470.314604
+>> # dtype: float64
 >> 
+>> country['gdp per capita'] = gdp_per_capita
+>> #        population         gdp  gdp per capita
+>> # korea        5180   169320000    32687.258687
+>> # japan       12718   516700000    40627.457147
+>> # china      141500  1409250000     9959.363958
+>> # usa         32676  2041280000    62470.314604
+>> ```
 >> 
+>
+>
+>
+> ## 5. Pandas DataFrame의 저장과 불러오기
+>> ### 5.1 Pandas DataFrame의 저장 [to_?]
+>> ```python
+>> country.to_csv("./country.csv")
+>> country.to_excel("./country.xlsx")
+>> ```
 >> 
->> 
+>> ### 5.2 Pandas DataFrame의 저장 [read_?]
+>> ```python
+>> country = pd.read_csv("./country.csv")
+>> country = pd.read_excel("./country.xlsx")
+>> ```
