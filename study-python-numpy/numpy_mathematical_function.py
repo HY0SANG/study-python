@@ -25,6 +25,3 @@ print(np.sum(matrix, axis=1))  # [ 6 22]
 
 # Q7. std 함수로 matrix의 표준편차를 구해 출력해보세요.
 print(np.std(matrix))  # 2.29128784747792
-
-# Q8. 마스킹 연산을 이용하여 matrix 중 5보다 작은 수들만 추출하여 출력해보세요.
-print(matrix[matrix < 5])  # [0 1 2 3 4]
