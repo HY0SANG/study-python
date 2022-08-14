@@ -11,14 +11,14 @@
 >> ### 2.1 Pandas import 방법 
 >> Pandas는 관습적으로 **pd**로 줄여씀
 >>```python
->>import andas as pd
+>>import pandas as pd
 >>```
 >
 >
 >
 > ## 3. Pandas의 데이터 형태
->> ### 3.1 Pandas의 Series 데이터
->> Numpy의 ndarray가 보강된 형태의 데이터로 Index를 가지고 있다.
+>> ### 3.1 Pandas의 Series
+>> Series는 Numpy의 ndarray가 보강된 형태의 데이터로 Index를 가지고 있다.
 >> ```python 
 >> data = pd.Series([1, 2, 3, 4])
 >> # 0    1
@@ -57,3 +57,10 @@
 >> population.values  # array([  5180,  12718, 141500,  32676], dtype=int64)
 >> ```
 >>
+>>
+>> ### 3.2 Pandas의 DataFrame
+>> DataFrame은 여러 개의 Series 데이터가 모여 행과 열을 이룬다.
+>> ```python
+>> 
+>> ```
+>> 
