@@ -351,6 +351,10 @@
 >> np.mean(arr)  # 3.5              ==  arr.mean()
 >> np.std(arr)  # 2.29128784747792  ==  arr.std()
 >> 
+>> np.sum(arr, axis=0)
+>> # array([ 4,  6,  8, 10])
+>> np.sum(arr, axis=1)
+>> # array([ 6, 22])
 >> ```
 >> 
 >> 
