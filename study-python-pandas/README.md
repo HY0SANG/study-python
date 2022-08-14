@@ -1,4 +1,4 @@
-# Pandas Study
+# Pandas Basic Study
 > ## 1. Pandas의 개요
 >> ### 1.1 Pandas란?
 >> Pandas는 구조화된 데이터를 효과적으로 처리하고 저장할 수 있는 라이브러리이다.
