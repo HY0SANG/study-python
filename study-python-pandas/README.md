@@ -270,6 +270,6 @@
 >> # df DataFrame의 열1을 기준으로 오름차순 정렬
 >> df.sort_values('열1', ascending=True)
 >> 
->> # df DataFrame의 열2를 기준으로 먼저 정렬하고, 그 다음 열1을 기준으로 내림차순 정렬
->> df.sort_values(['열2', '열1'], ascending=False) 
+>> # df DataFrame의 열2를 기준으로 먼저 내림차순 정렬하고, 그 다음 열1을 기준으로 오름차순 정렬
+>> df.sort_values(['열2', '열1'], ascending=[False, True])
 >> ```
