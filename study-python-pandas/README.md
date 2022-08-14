@@ -61,6 +61,45 @@
 >> ### 3.2 Pandas의 DataFrame
 >> DataFrame은 여러 개의 Series 데이터가 모여 행과 열을 이룬다.
 >> ```python
+>> population_dict = {
+>>     'korea': 5180,
+>>     'japan': 12718,
+>>     'china': 141500,
+>>     'usa': 32676
+>> }
+>> # {'korea': 5180, 'japan': 12718, 'china': 141500, 'usa': 32676} 
 >> 
+>> gdp_dict = {
+>>     'korea': 169320000,
+>>     'japan': 516700000,
+>>     'china': 1409250000,
+>>     'usa': 2041280000
+>> }
+>> # {'korea': 169320000, 'japan': 516700000,
+>> #  'china': 1409250000, 'usa': 2041280000}
+>> 
+>> population = pd.Series(population_dict)
+>> # korea      5180
+>> # japan     12718
+>> # china    141500
+>> # usa       32676
+>> # dtype: int64
+>> 
+>> gdp = pd.Series(gdp_dict)
+>> # korea     169320000
+>> # japan     516700000
+>> # china    1409250000
+>> # usa      2041280000
+>> # dtype: int64
+>> 
+>> country = pd.DataFrame({
+>>     'population': population,
+>>     'gdp': gdp
+>> })
+>> #        population         gdp
+>> # korea        5180   169320000
+>> # japan       12718   516700000
+>> # china      141500  1409250000
+>> # usa         32676  2041280000
 >> ```
 >> 
