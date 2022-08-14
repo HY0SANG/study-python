@@ -110,6 +110,8 @@
 >> # japan     516700000
 >> # china    1409250000
 >> # usa      2041280000
->> # Name: gdp, dtype: int64
+>> # Name: gdp, dtype: int64\
+>> 
+>> country['gdp']['korea']  # 169320000
 >> ```
 >> 
