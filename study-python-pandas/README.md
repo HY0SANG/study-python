@@ -262,7 +262,14 @@
 >> df.dropna()  # 누락된 데이터 제거
 >> df['NaN이 있는 열'] = df['NaN이 있는 열'].fillna('NaN을 대체할 값')  # 누락된 데이터 False 반환
 >> ```
->
->
->
-> ## 8. Pandas 
+>> 
+>> 
+>> ### 7.3 Pandas DataFrame의 정렬 [sort_values]
+>> DataFrame의 sort_values 함수를 통해 값으로 정렬할 수 있다.
+>> ```python
+>> # df DataFrame의 열1을 기준으로 오름차순 정렬
+>> df.sort_values('열1', ascending=True)
+>> 
+>> # df DataFrame의 열2를 기준으로 먼저 정렬하고, 그 다음 열1을 기준으로 내림차순 정렬
+>> df.sort_values(['열2', '열1'], ascending=False) 
+>> ```
