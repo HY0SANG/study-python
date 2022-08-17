@@ -194,3 +194,65 @@
 >> # 5    cat    L      12   True
 >> # 6    cat    L      12   True
 >> ```
+>
+>
+>
+> ## 4. Pandas DataFrame의 MultiIndex
+> MultiIndex를 통해 DataFrame의 인덱스를 계층적으로 만들 수 있다.
+> ```python
+> df = pd.DataFrame(
+>     np.random.randn(4, 2),
+>     index=[['A', 'A', 'B', 'B'], [1, 2, 1, 2]],
+>     columns=['data1', 'data2']
+> )
+> #         data1     data2
+> # A 1  0.881445  0.084808
+> #   2  1.412776  2.229226
+> # B 1 -0.840466 -1.392684
+> #   2 -0.005056 -1.131680
+>
+>
+> df = pd.DataFrame(
+>     np.random.randn(4, 4),
+>     columns=[['A', 'A', 'B', 'B'], [1, 2, 1, 2]]
+> )
+> #           A                   B          
+> #           1         2         1         2
+> # 0 -1.197475  0.852856  0.032279  0.214744
+> # 1  0.028650  0.221555  2.744049  0.551469
+> # 2 -0.278586  1.450586 -0.185955  0.024346
+> # 3  0.306969  0.351527  0.304273  0.102440
+> ```
+>
+>
+>
+> ## 5. Pandas DataFrame의 PivotTable
+> ```python
+> df = pd.DataFrame({"A": ["foo", "foo", "foo", "foo", "foo",
+>                          "bar", "bar", "bar", "bar"],
+>                    "B": ["one", "one", "one", "two", "two",
+>                          "one", "one", "two", "two"],
+>                    "C": ["small", "large", "large", "small",
+>                          "small", "large", "small", "small",
+>                          "large"],
+>                    "D": [1, 2, 2, 3, 3, 4, 5, 6, 7],
+>                    "E": [2, 4, 5, 5, 6, 6, 8, 9, 9]})
+> #      A    B      C  D  E
+> # 0  foo  one  small  1  2
+> # 1  foo  one  large  2  4
+> # 2  foo  one  large  2  5
+> # 3  foo  two  small  3  5
+> # 4  foo  two  small  3  6
+> # 5  bar  one  large  4  6
+> # 6  bar  one  small  5  8
+> # 7  bar  two  small  6  9
+> # 8  bar  two  large  7  9
+> 
+> df.pivot_table(index=["A", "B"], columns="C", values="D", aggfunc=np.sum)
+> # C        large  small
+> # A   B                
+> # bar one    4.0    5.0
+> #     two    7.0    6.0
+> # foo one    4.0    1.0
+> #     two    NaN    6.0
+> ```
