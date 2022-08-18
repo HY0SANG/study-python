@@ -9,16 +9,34 @@ Matplotlib는 관습적으로 **plt**로 줄여씀
 ```python
 import matplotlib.pyplot as plt
 ```
+### 1.3 Matplotlib figure의 구조
+<image src="https://user-images.githubusercontent.com/110414297/185372425-9935fddd-f6d3-4721-a06f-ad655ec2e30b.png" width="500px">
 
-## 2. 그래프 그리기
+
+
+## 2. 그래프 그리고 저장하기
+### 2.1 그래프 그리기
 ```python
 x = [1, 2, 3, 4, 5]
 y = [1, 2, 3, 4, 5]
 
-plt.plot(x, y)
-plt.title("First Plot")
-plt.xlabel("x")
-plt.ylabel("y")
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_title("Frist Plot")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
 ```
 <image src="https://user-images.githubusercontent.com/110414297/185342023-2e1961d3-317a-43f2-90ac-e012ca4c80aa.png" width="350px">
 
+### 2.2 그래프 저장하기
+```python
+# 화질 조절 가능, dpi == doth per inch
+fig.set_dpi(300)
+# first_plot.png 파일로 저장하기
+fig.savefig("first_plot.png")
+```
+  
+### 2.3 여러개 그래프 그리기
+```python
+
+```
