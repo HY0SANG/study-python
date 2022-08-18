@@ -14,6 +14,11 @@ import matplotlib.pyplot as plt
 ```python
 x = [1, 2, 3, 4, 5]
 y = [1, 2, 3, 4, 5]
+
 plt.plot(x, y)
+plt.title("First Plot")
+plt.xlabel("x")
+plt.ylabel("y")
 ```
-<image src="https://user-images.githubusercontent.com/110414297/185340669-bcd5aec6-122c-4f18-b3e2-1c4484134baa.png" width="300px">
+<image src="https://user-images.githubusercontent.com/110414297/185342023-2e1961d3-317a-43f2-90ac-e012ca4c80aa.png" width="350px">
+
