@@ -38,5 +38,9 @@ fig.savefig("first_plot.png")
   
 ### 2.3 여러개 그래프 그리기
 ```python
+x = np.linspace(0, np.pi*4, 100)
 
+fig, axes = plt.subplots(2, 1)
+axes[0].plot(x, np.sin(x))
+axes[1].plot(x, np.cos(x))
 ```
