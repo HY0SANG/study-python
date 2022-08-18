@@ -44,3 +44,4 @@ fig, axes = plt.subplots(2, 1)
 axes[0].plot(x, np.sin(x))
 axes[1].plot(x, np.cos(x))
 ```
+<image src="https://user-images.githubusercontent.com/110414297/185382313-6d21dd4e-93a0-45e7-af5b-481ff42de926.png" width="350px">
