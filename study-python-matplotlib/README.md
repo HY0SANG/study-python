@@ -78,3 +78,34 @@ ax.plot(x, x+6, marker="s")
 ax.plot(x, x+8, marker="*")
 ```
 <image src="https://user-images.githubusercontent.com/110414297/185386798-ab354007-bb51-4ee8-92b8-fbd2601d1fdd.png" width="350px"/>
+
+
+#### 3.1.4 범례 설정
+```python
+fig, ax = plt.subplots()
+ax.plot(x, x, label='y=x')
+ax.plot(x, x**2, label='y=x^2')
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.legend(
+    loc='upper right', # lower/center/upper  left/center/right
+    shadow=True,
+    fancybox=True, # 모서리 둥글게
+    borderpad=2 # Padding 값 조정
+)
+```
+<image src="https://user-images.githubusercontent.com/110414297/185571800-5ed6e8d0-ad29-4782-9075-55213a327210.png"/>
+
+
+#### 3.1.5 축 경계 조정하기
+```python
+x = np.linspace(0, 10, 1000)
+fig, ax = plt.subplots()
+ax.plot(x, np.sin(x))
+ax.set_xlim(-2, 12)
+ax.set_ylim(-1.5, 1.5)
+```
+<image src="https://user-images.githubusercontent.com/110414297/185567208-680f0a58-a780-482f-8a79-52c48f1cb47b.png"/>
+
+
+## 4. 
