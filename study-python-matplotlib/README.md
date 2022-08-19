@@ -26,7 +26,7 @@ ax.set_title("Frist Plot")
 ax.set_xlabel("x")
 ax.set_ylabel("y")
 ```
-<image src="https://user-images.githubusercontent.com/110414297/185342023-2e1961d3-317a-43f2-90ac-e012ca4c80aa.png" width="350px"/>
+<image src="https://user-images.githubusercontent.com/110414297/185342023-2e1961d3-317a-43f2-90ac-e012ca4c80aa.png"/>
 
 ### 2.2 그래프 저장하기
 ```python
@@ -44,7 +44,7 @@ fig, axes = plt.subplots(2, 1)
 axes[0].plot(x, np.sin(x))
 axes[1].plot(x, np.cos(x))
 ```
-<image src="https://user-images.githubusercontent.com/110414297/185382313-6d21dd4e-93a0-45e7-af5b-481ff42de926.png" width="350px"/>
+<image src="https://user-images.githubusercontent.com/110414297/185382313-6d21dd4e-93a0-45e7-af5b-481ff42de926.png"/>
 
 ## 3. 그래프의 종류 및 속성
 ### 3.1 Line Graph
@@ -58,7 +58,8 @@ ax.plot(x, x+2, linestyle="--") # dashed
 ax.plot(x, x+4, linestyle="-.") # dashdot
 ax.plot(x, x+6, linestyle=":")  # dotted
 ```
-<image src="https://user-images.githubusercontent.com/110414297/185383866-a87101ac-d013-4547-a002-47f63b19db58.png" width="350px"/>
+<image src="https://user-images.githubusercontent.com/110414297/185592278-d5e67f0a-f42f-4649-90f9-dea00e22df4d.png"/>
+
 
 #### 3.1.2 Color
 ```python
@@ -67,7 +68,8 @@ ax.plot(x, x+2, color="green") # red, green, blue, cyan...
 ax.plot(x, x+4, color="0.8") # 0 ~ 1
 ax.plot(x, x+6, color="#524FA1")  # color code(hex)
 ```
-<image src="https://user-images.githubusercontent.com/110414297/185386210-7cae8461-5f73-48ac-81d2-7f5cff63e2f6.png" width="350px"/>
+<image src="https://user-images.githubusercontent.com/110414297/185592384-6320535a-e3c8-498d-a0ce-9b37ac727ca4.png"/>
+
 
 #### 3.1.3 Marker
 ```python
@@ -77,7 +79,8 @@ ax.plot(x, x+4, marker="v")
 ax.plot(x, x+6, marker="s")
 ax.plot(x, x+8, marker="*")
 ```
-<image src="https://user-images.githubusercontent.com/110414297/185386798-ab354007-bb51-4ee8-92b8-fbd2601d1fdd.png" width="350px"/>
+<image src="https://user-images.githubusercontent.com/110414297/185592444-ab918ec5-a207-4c6e-b6e6-997352c05f02.png"/>
+
 
 
 #### 3.1.4 범례 설정
@@ -137,6 +140,45 @@ ax.scatter(
 )
 ```
 <image src="https://user-images.githubusercontent.com/110414297/185574951-f68f15fa-ebbb-4e7c-b66d-bbe5618d9d6e.png"/>
+
+
+### 3.3 Bar Graph
+```python
+x = np.arange(10)
+# figsize 속성으로 그래프의 가로, 세로 길이를 조절 가능하다
+fig, ax = plt.subplots(figsize=(12, 4))
+ax.bar(x, x*2)
+```
+<image src="https://user-images.githubusercontent.com/110414297/185591922-f16d5d60-7563-45b1-9394-df37b065a703.png"/>
+
+
+#### 3.3.1 누적 Bar Graph
+```python
+x = np.random.rand(3)
+y = np.random.rand(3)
+z = np.random.rand(3)
+data = [x, y, z]
+
+fig, ax = plt.subplots()
+x_ax = np.arange(3)
+
+for i in x_ax:
+    ax.bar(x_ax, data[i],
+           bottom=np.sum(data[:i], axis=0))
+ax.set_xticks(x_ax)
+ax.set_xticklabels(["A", "B", "C"])
+```
+<image src="https://user-images.githubusercontent.com/110414297/185603153-7091150b-bf32-4616-aa74-83e26ef80485.png"/>
+
+
+#### 3.4 Histogram Graph
+```python
+fig, ax = plt.subplots()
+data = np.random.randn(1000)
+# bins속성을 이용해 하나의 막대에 몇개의 데이터를 넣을지 설정 가능
+ax.hist(data, bins=50)
+```
+<image src="https://user-images.githubusercontent.com/110414297/185604467-980cc4e0-43d0-4334-b12c-d5439b1ff355.png"/>
 
 
 ## 4. 
