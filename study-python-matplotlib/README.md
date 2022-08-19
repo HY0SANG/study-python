@@ -47,7 +47,7 @@ axes[1].plot(x, np.cos(x))
 <image src="https://user-images.githubusercontent.com/110414297/185382313-6d21dd4e-93a0-45e7-af5b-481ff42de926.png" width="350px"/>
 
 ## 3. 그래프의 종류 및 속성
-### 3.1 Line plot
+### 3.1 Line Graph
 #### 3.1.1 Linestyle
 ```python
 x = np.arange(10)
@@ -106,6 +106,37 @@ ax.set_xlim(-2, 12)
 ax.set_ylim(-1.5, 1.5)
 ```
 <image src="https://user-images.githubusercontent.com/110414297/185567208-680f0a58-a780-482f-8a79-52c48f1cb47b.png"/>
+
+
+### 3.2 Scatter Graph
+```python
+fig, ax = plt.subplots()
+x = np.arange(10)
+
+ax.plot(
+    x, x**2, "o",
+    markersize=15,
+    markerfacecolor='white',
+    markeredgecolor='red'
+)
+```
+<image src="https://user-images.githubusercontent.com/110414297/185573789-fcca8d42-448e-42b7-a415-287a63af5ce6.png"/>
+
+```python
+fig, ax = plt.subplots()
+x = np.random.randn(50)
+y = np.random.randn(50)
+colors = np.random.randint(0, 100, 50)
+sizes = 500 * np.pi * np.random.rand(50) ** 2
+
+ax.scatter(
+    x, y,
+    c=colors,   # 색상
+    s=sizes,    # 사이즈
+    alpha=0.2   # 투명도
+)
+```
+<image src="https://user-images.githubusercontent.com/110414297/185574951-f68f15fa-ebbb-4e7c-b66d-bbe5618d9d6e.png"/>
 
 
 ## 4. 
