@@ -82,7 +82,6 @@ ax.plot(x, x+8, marker="*")
 <image src="https://user-images.githubusercontent.com/110414297/185592444-ab918ec5-a207-4c6e-b6e6-997352c05f02.png"/>
 
 
-
 #### 3.1.4 범례 설정
 ```python
 fig, ax = plt.subplots()
