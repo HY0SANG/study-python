@@ -178,6 +178,3 @@ data = np.random.randn(1000)
 ax.hist(data, bins=50)
 ```
 <image src="https://user-images.githubusercontent.com/110414297/185604467-980cc4e0-43d0-4334-b12c-d5439b1ff355.png"/>
-
-
-## 4. 
