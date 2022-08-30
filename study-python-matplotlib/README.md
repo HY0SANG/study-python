@@ -2,7 +2,7 @@
 
 ## 1. Matplotlib의 개요
 ### 1.1 Matplotlib이란?
-파이썬에서 데이터를 그래프나 차트로 시각화할 수 있는 라이브러리이다.
+파이썬에서 데이터를 그래프나 차트로 시각화할 수 있는 라이브러리
 
 ### 1.2 Matplotlib import 방법
 Matplotlib는 관습적으로 **plt**로 줄여씀
