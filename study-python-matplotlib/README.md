@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 <image src="https://user-images.githubusercontent.com/110414297/185372425-9935fddd-f6d3-4721-a06f-ad655ec2e30b.png" width="500px"/>
 
 
-
 ## 2. 그래프 그리고 저장하기
 ### 2.1 그래프 그리기
 ```python
